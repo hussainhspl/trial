@@ -13,24 +13,29 @@ class ListItemContent extends Component {
   render() {
     const { ListRow, itemView, iconView, title, subtitle, image, statusView } = styles;
     const data= this.props.dataArray;
+    console.log("color", this.props);
     return (
       <View>
-        <Header history={this.props.history} icon="arrow-back" />
+        {/* <Header history={this.props.history} icon="arrow-back" /> */}
         <FlatList
           data={data}
           renderItem={({item}) => (
             <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' onPress={this._onPressButton}>
               <View style={ListRow}>
                 <View style={itemView}>
-                  <View style={statusView}>
-                    {/* { item.url && 
-                      <Image style={image} source={item.url} />
-                    }
-                    { this.props.icon &&
-                      <Icon name={item.icon} size={70} />
-                    } */}
-                    <View style={{width: 15, height: 15, borderRadius: 10, backgroundColor:`${item.color}`}} />
-                  </View>
+                  {
+                    this.props.dataArray.color && (
+                      <View style={statusView}>
+                        {/* { item.url && 
+                          <Image style={image} source={item.url} />
+                        }
+                        { this.props.icon &&
+                          <Icon name={item.icon} size={70} />
+                        } */}
+                        <View style={{width: 15, height: 15, borderRadius: 10, backgroundColor:`${item.color}`}} />
+                      </View>
+                    )
+                  }   
                   <View>
                     <Text numberOfLines={1} style={title}>{item.title}</Text>
                     <Text numberOfLines={1} style={subtitle}>{item.subtitle ? item.subtitle: ''}</Text>
@@ -70,11 +75,13 @@ const styles= {
   title: {
     fontWeight: '600',
     fontSize: 18,
+    paddingRight: 15,
   },
   subtitle: {
     fontSize: 16,
     paddingTop: 5,
     color: '#7b7b7b',
+    paddingRight: 15,
   },
   image: {
     height: 60,
@@ -89,5 +96,9 @@ const styles= {
     // backgroundColor: '#0f0',
     width: 50,
   }
+}
+
+ListItemContent.defaultProps = {
+  color: '#f00'
 }
 export default ListItemContent;

@@ -8,6 +8,9 @@ import FloatingAction from './FloatingAction';
 import HorizontalScroll from './HorizontalScroll';
 import LightBoxItem from './LightBoxItem';
 import Notification from './Notification';
+import RangeSlider from './RangeSlider';
+import RangeSliderInterval from './RangeSliderInterval';
+import Search from './Search';
 
 
 let dataCarousel =[
@@ -63,7 +66,10 @@ class ComponentInteraction extends Component {
           path= {{uri: 'https://thumbs.dreamstime.com/b/tiger-resting-lunch-zoo-38736862.jpg' }}
           Style= {{ height: 250}}
         /> */}
-        <Notification />
+        {/* <Notification /> */}
+        {/* <RangeSlider /> */}
+        {/* <RangeSliderInterval /> */}
+        <Search />
       </View>
     )
   }
