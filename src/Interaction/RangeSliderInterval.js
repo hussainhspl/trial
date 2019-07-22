@@ -102,14 +102,15 @@ const styles = {
     flexDirection:'row',
     alignItems:'center',
     justifyContent: 'space-between',
-    bottom:-25,
+    bottom:-20,
     right: 0,
     width: 310,
+    marginBottom: 5
   },
   active:{
     textAlign: 'center',
     fontSize:16,
-    bottom:10,
+    bottom:20,
     color:'#5e5e5e',
   },
   inactive:{
@@ -118,6 +119,9 @@ const styles = {
     textAlign: 'center',
     fontWeight:'normal',
     color:'#bdc3c7',
+    fontSize: 10,
+    // bottom: 10,
+    height: 20,
   },
   line:{
     fontSize:8,

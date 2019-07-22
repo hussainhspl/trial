@@ -67,6 +67,24 @@ class ComponentInteraction extends Component {
           <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/Notification")}>
             <Text> Notification </Text> 
           </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/RangeSlider")}>
+            <Text> Ranger Slider </Text> 
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/RangeSliderInterval")}>
+            <Text> Ranger Slider Interval </Text> 
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/Search")}>
+            <Text> Search </Text> 
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/Sidebar")}>
+            <Text> Sidebar </Text> 
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/StackedCards")}>
+            <Text> Stacked Cards </Text> 
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' style={touchable} onPress={() => history.push("/Video")}>
+            <Text> Video </Text> 
+          </TouchableHighlight>
         </ScrollView>
       </View>
       //   //  <Header icon="menu" title="Interaction" />

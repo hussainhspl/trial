@@ -9,6 +9,12 @@ import FloatingAction from './Interaction/FloatingAction';
 import HorizontalScroll from './Interaction/HorizontalScroll';
 import LightBoxItem from './Interaction/LightBoxItem';
 import Notification from './Interaction/Notification';
+import RangeSlider from './Interaction/RangeSlider';
+import RangeSliderInterval from './Interaction/RangeSliderInterval';
+import Search from './Interaction/Search';
+import Sidebar from './Interaction/Sidebar';
+import StackedCards from './Interaction/StackedCards';
+import Video from './Interaction/Video';
 
 
 
@@ -72,7 +78,20 @@ class RouterInteraction extends React.Component {
           />} />
         <Route exact path="/Notification"
           component={Notification} />
-
+        <Route exact path="/RangeSlider"
+          component={RangeSlider} />
+        <Route exact path="/RangeSliderInterval"
+          component={RangeSliderInterval} />
+        <Route exact path="/Search"
+          component={Search} />
+        <Route exact path="/Sidebar"
+          component={Sidebar} />
+        <Route exact path="/StackedCards"
+          component={StackedCards} />
+        <Route exact path="/Video" 
+          render={() => <Video 
+              src={{uri:"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"}}
+            />} />
       </Fragment>
     )
   }
