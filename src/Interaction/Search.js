@@ -58,7 +58,7 @@ class Search extends Component {
     const filteredEmails = emails.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
     return(
       <View>
-        <Header icon="arrow-back" title="Notification" />
+        <Header history={this.props.history} icon="arrow-back" title="Notification" />
         {/* <Text> search </Text> */}
         <SearchInput 
           onChangeText={(term) => { this.searchUpdated(term) }} 

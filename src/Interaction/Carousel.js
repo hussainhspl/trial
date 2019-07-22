@@ -46,7 +46,7 @@ class Carousel extends React.Component {
     console.log("this.props.Entries ", this.props.Entries)
     return (
       <View>
-        <Header icon="arrow-back" title="Carousel" />
+        <Header history={this.props.history} icon="arrow-back" title="Carousel" />
         <CarouselSnap
           // ref={(c) => { this._carousel = c; }}
           ref={(c) => { if (!this.state.slider1Ref) { this.setState({ slider1Ref: c }); } }}

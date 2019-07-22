@@ -4,9 +4,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Header from '../HeaderCommon';
 
 const data= [
-  {name: 'adfsfdsf'},
-  {name: 'bgfsg'},
-  {name: 'cdfsf'},
+  {name: 'option 1 '},
+  {name: 'option 2'},
+  {name: 'option 3'},
   
 ]
 
@@ -24,7 +24,7 @@ class FloatingAction extends React.Component {
     const { floatingBg, floatButton, floatingAlign, moreButton, inlineText, floatingText} = styles;
     return(
       <View style={{flex: 1}}>
-        <Header icon="arrow-back" title="Floating Action"  />
+        <Header history={this.props.history} icon="arrow-back" title="Floating Action"  />
         <View style={styles.MainContainer}>
         <TouchableOpacity
           activeOpacity={0.7}

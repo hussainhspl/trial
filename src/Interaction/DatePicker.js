@@ -26,7 +26,7 @@ class DatePicker extends React.Component {
     const {ViewStyle, TextStyle } = styles;
     return(
       <View>
-        <Header icon="arrow-back" title="ActionSheet" />
+        <Header history={this.props.history} icon="arrow-back" title="ActionSheet" />
         <TouchableOpacity onPress={this.showDateTimePicker}>
           <View style={ViewStyle}>
             <Text style={TextStyle}> 

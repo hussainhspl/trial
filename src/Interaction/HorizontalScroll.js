@@ -6,28 +6,17 @@ import ImageResizeMode from 'react-native/Libraries/Image/ImageResizeMode'
 class HorizontalScroll extends Component {
   _renderItem = ({item}) => (
     <View>
-      <Text>
-        hellofdf
-      </Text>
-      <Text>
-        hellofdf
-      </Text>
-      <Text>
-        hellofdf
-      </Text>
-      <Text>
-        hellofdf
-      </Text>
-      <Text>
-        hellofdf
-      </Text>
-      <Text>
-        hellofdf
-      </Text>
-
-      <Text>
-        hellofdf
-      </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
+      <Text> hellofdf </Text>
       {/* <Image
         style={{height: 250, width: 350, marginRight:15}} 
         source={item.path} /> */}
@@ -37,7 +26,7 @@ class HorizontalScroll extends Component {
     console.log("this.props.data",this.props.data);
     return(
       <View style={{flex: 1}}>
-        <Header icon="arrow-back" title="Horizontal Scroll" />
+        <Header history={this.props.history} icon="arrow-back" title="Horizontal Scroll" />
         {/* <FlatList
           horizontal={true}
           data={this.props.data}
@@ -48,8 +37,7 @@ class HorizontalScroll extends Component {
         /> */}
         {/* <View style={style.HorizontalView}> */}
         <ScrollView
-          horizontal
-          
+          horizontal 
         >
           {this.props.children}
         </ScrollView>

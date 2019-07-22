@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 #import <React/RCTPushNotificationManager.h>
+
 #import "AppDelegate.h"
 
 #import <React/RCTBridge.h>
@@ -67,4 +68,5 @@
  {
   [RCTPushNotificationManager didReceiveLocalNotification:notification];
  }
+
 @end

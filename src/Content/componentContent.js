@@ -80,7 +80,6 @@ class componentContent extends Component {
     const history= this.props.history;
     console.log("scroll enabled :", scrollEnabled);
 		return (
-      
 			<View style={{ flex: 1,backgroundColor: '#fff'}}>
         <Header icon="menu" />
         <ScrollView
@@ -235,6 +234,11 @@ class componentContent extends Component {
           /> */}
           {/* </Text> */}
           {/* </View> */}
+
+
+
+
+
         </ScrollView>
         
 			</View>
@@ -253,7 +257,6 @@ const styles= {
     borderBottomWidth: 1,
     borderColor: '#ddd',
     paddingLeft: 15,
-
   }
 }
 

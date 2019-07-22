@@ -2,15 +2,17 @@ import React from 'react';
 import {View, Text, TouchableHighlight } from 'react-native';
 import { Left, Body, Right, Icon, 
   Title, Button, Header} from 'native-base';
+// import console = require('console');
 
 class HeaderCommon extends React.Component {
   render() {
     const { styleHeader, styleHeaderTitle} = styles;
     const history= this.props.history;
+    console.log("history:", history);
     return (
       <Header style={styleHeader}>
         <Left style={{flex:1}}>
-        <TouchableHighlight underlayColor='rgba(221, 221, 221, 0.4)' onPress={() => history.push("/")}>
+        <TouchableHighlight  style={{paddingHorizontal:10}} underlayColor='rgba(221, 221, 221, 0.4)' onPress={() => history.push("/")}>
             <Icon style={{color: '#fff'}} name={this.props.icon} />
           </TouchableHighlight>
         </Left>

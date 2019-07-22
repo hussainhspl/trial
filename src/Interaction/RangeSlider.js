@@ -11,7 +11,7 @@ class RangeSlider extends React.Component {
   render() {
     return(
       <View>
-        <Header icon="arrow-back" title="Notification" />
+        <Header history={this.props.history} icon="arrow-back" title="Notification" />
         <Slider
           value={this.state.value}
           onValueChange={(value) => this.setState({value})}

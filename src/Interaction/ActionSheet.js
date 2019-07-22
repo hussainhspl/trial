@@ -14,10 +14,10 @@ class ActionSheet extends React.Component {
   render() {
     const { modalBg, closeButton, closeText, modalView } = styles;
     let data = this.props;
-    console.log("view style: ", data.ViewStyle);
+    console.log("view style: ", data);
     return(
       <View >
-        <Header icon="arrow-back" title="ActionSheet" />
+        <Header history={this.props.history} icon="arrow-back" title="ActionSheet" />
         <Modal
           animationType="slide"
           transparent={true}

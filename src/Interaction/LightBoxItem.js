@@ -15,7 +15,7 @@ class LightboxItem extends React.Component {
     const {navigator} = this.props;
     return (
       <View style={{flex: 1}}>
-        <Header icon="arrow-back" title="LightBox" />
+        <Header history={this.props.history} icon="arrow-back" title="LightBox" />
           <Lightbox navigator={navigator}>
           <Image
             style={this.props.Style}

@@ -41,7 +41,7 @@ class RangeSliderInterval extends React.Component {
   render() {
     return(
       <View>
-        <Header icon="arrow-back" title="Slider Interval" />
+        <Header history={this.props.history} icon="arrow-back" title="Slider Interval" />
         <View style={styles.sliderView}>
           <View>
             <Text style={styles.text}>Two Markers with minimum overlap distance:</Text>

@@ -38,10 +38,12 @@ import Tooltip from './src/Content/Tooltip';
 import UserAvatar from './src/Content/UserAvatar';
 import ComponentInteraction from './src/Interaction/ComponentInteraction';
 
+
+import RouterInteraction from './src/RouterInteraction';
+
+
 // import InfoAlert from './src/Content/i'
 
-
-// import ComponentContent from './src/Content/ComponentContent';
 // import ChatMessage from './src/Content/chatMessage';
 
 const instructions = Platform.select({
@@ -65,7 +67,6 @@ export default class App extends Component<Props> {
     return (
       <NativeRouter>
       <Fragment>
-        {/* <SafeAreaView /> */}
         <StatusBar barStyle="light-content" 
           backgroundColor="3c86f2"
         /> 
@@ -73,8 +74,7 @@ export default class App extends Component<Props> {
           {/* <AccountOverview />  */}
           {/* <InventaryManagement /> */}
           {/* <AccountTransaction /> */}
-          {/* <Text> hello </Text> */}
-          <ComponentInteraction />
+          {/* <ComponentInteraction /> */}
           <Switch>
             {/* <Route exact path="/" component={ComponentContent}></Route> */}
             <Route exact path="/infoAlert" component={InfoAlert}></Route>
@@ -92,13 +92,14 @@ export default class App extends Component<Props> {
             <Route exact path="/CardAction"
               render={(props) => <CardAction {...props} title="Fruit">
               A Bunch of grapes
-            </CardAction>}></Route>
+              </CardAction>}>
+            </Route>
             <Route exact path="/CardBackground"
               render={(props) => <CardBackground {...props}
-                title="Bank of Public Trust"
-                info="South Carolina"
-                rating= {3} 
-                votes={180} />}></Route>
+              title="Bank of Public Trust"
+              info="South Carolina"
+              rating= {3} 
+              votes={180} />}></Route>
             <Route exact path="/CardItem"
               render={(props) => <CardItem {...props}
               name="Hussain Badri"
@@ -111,9 +112,9 @@ export default class App extends Component<Props> {
               />}></Route>
             <Route exact path="/ChatMessage"
               render={(props) => <ChatMessage {...props}
-                senderMessage="hey" 
-                receiverMessage="Hello Hussain!" />
-              }></Route>
+              senderMessage="hey" 
+              receiverMessage="Hello Hussain!" />
+            }></Route>
             <Route exact path="/FlipContent"
               render={(props) => <FlipContent {...props}
               frontImage={{uri: 'https://www.outsystems.com/OSUImobilePreview/img/OSUImobilePreview.tulipback.png?_Ud28_KZAyHG+Iz6_VAI8g'}}
@@ -131,53 +132,55 @@ export default class App extends Component<Props> {
             <Route exact path="/ListItemContent"
               render={(props) => <ListItemContent {...props}
                 dataArray={list}
-              />}></Route>
+                />}></Route>
             <Route exact path="/Section"
               render={(props) => <Section {...props} title="summary" 
               content="Commodo adipisicing sit duis irure dolor voluptate esse eiusmod consequat nulla et eu esse id. Do velit ex officia irure. Voluptate sunt sunt qui do consectetur adipisicing mollit sint sunt officia consectetur incididunt dolor." 
               />}></Route>
-              <Route exact path="/SectionGroup"
-                render={(props) => <SectionGroup {...props}
-                  title="summary" 
-                  content="Commodo adipisicing sit duis irure dolor voluptate esse eiusmod consequat nulla et eu esse id. Do velit ex officia irure. Voluptate sunt sunt qui do consectetur adipisicing mollit sint sunt officia consectetur incididunt dolor. 
-        
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
-                  
-                  Mollit elit pariatur fugiat do excepteur irure ex reprehenderit. Et adipisicing reprehenderit ut duis consectetur fugiat velit magna exercitation sit. Enim amet qui anim laborum enim anim occaecat officia. Sint Lorem consequat ipsum eu duis velit sunt irure id nostrud.
-                  
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
-                  
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
-                  
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
-                  
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
-                  
-                  Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui."
-                  />}></Route>
-                <Route exact path="/tag" 
-                  render={(props) => <Tag {...props}
-                    ProfileUrl={{uri: "https://www.menshairstylestoday.com/wp-content/uploads/2016/10/Hairstyles-For-Square-Faces-Buzz-Cut.jpg"}}
-                    name="Hussain Badri"
-                    area="Pune, IN"
-                    skills={skillsArray}
-                    info="Hussain is a 27 years old React Developer with an impressive portfolio"
+            <Route exact path="/SectionGroup"
+              render={(props) => <SectionGroup {...props}
+              title="summary" 
+              content="Commodo adipisicing sit duis irure dolor voluptate esse eiusmod consequat nulla et eu esse id. Do velit ex officia irure. Voluptate sunt sunt qui do consectetur adipisicing mollit sint sunt officia consectetur incididunt dolor. 
+              
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
+              
+              Mollit elit pariatur fugiat do excepteur irure ex reprehenderit. Et adipisicing reprehenderit ut duis consectetur fugiat velit magna exercitation sit. Enim amet qui anim laborum enim anim occaecat officia. Sint Lorem consequat ipsum eu duis velit sunt irure id nostrud.
+              
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
+              
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
+              
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
+                
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui.
+                
+              Laborum minim nostrud excepteur velit tempor qui incididunt elit excepteur ea do irure irure. Nisi cupidatat consectetur non deserunt sit reprehenderit tempor deserunt fugiat est adipisicing irure tempor. Minim eu adipisicing sint consectetur adipisicing excepteur est exercitation in duis nostrud voluptate dolor. Ad id exercitation qui qui."
+                />}></Route>
+            <Route exact path="/tag" 
+                render={(props) => <Tag {...props}
+                ProfileUrl={{uri: "https://www.menshairstylestoday.com/wp-content/uploads/2016/10/Hairstyles-For-Square-Faces-Buzz-Cut.jpg"}}
+                  name="Hussain Badri"
+                  area="Pune, IN"
+                  skills={skillsArray}
+                  info="Hussain is a 27 years old React Developer with an impressive portfolio"
                   />}
-                ></Route>
-                <Route exact path="/Tooltip"
-                  render={(props) => <Tooltip {...props}
-                    tip="this is tool tip "
-                    title="click here"
-                /> }></Route>
-                <Route exact path="/UserAvatar"
+              ></Route>
+            <Route exact path="/Tooltip"
+              render={(props) => <Tooltip {...props}
+              tip="this is tool tip "
+              title="click here"
+              /> }>
+            </Route>
+            <Route exact path="/UserAvatar"
                   render={(props) => <UserAvatar {...props}
-                    name="Hussain Badri"
-                    ProfileUrl={{uri: "https://www.menshairstylestoday.com/wp-content/uploads/2016/10/Hairstyles-For-Square-Faces-Buzz-Cut.jpg"}}
-                  />}></Route>
-                  
+                  name="Hussain Badri"
+                  ProfileUrl={{uri: "https://www.menshairstylestoday.com/wp-content/uploads/2016/10/Hairstyles-For-Square-Faces-Buzz-Cut.jpg"}}
+                  />}></Route>       
+            {/* Interacion */}
+            
+            <RouterInteraction />
           </Switch>
-          {/* <ComponentContent /> */}
-          {/* <Text> hello </Text> */}
+          
         {/* </View> */}
         <SafeAreaView style={{ flex: 0, backgroundColor: '#fff' }} />
       </Fragment>
@@ -194,6 +197,8 @@ const styles = {
     // backgroundColor: 'red'
   },
 }
+
+
 
 const list = [
   {
